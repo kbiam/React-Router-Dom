@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom'
 import User from './components/User'
 import Github from './components/Github/Github'
 import { userInfo } from './components/Github/Github'
+import Proposal from './components/Proposal/Proposal'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       &nbsp;<NavLink to="/contact">Contact</NavLink>&nbsp;
       &nbsp;<NavLink to="/user/1/kush">User</NavLink>&nbsp;
       &nbsp;<NavLink to="/github">Github</NavLink>&nbsp;
+      &nbsp;<NavLink to="/proposal">Proposal</NavLink>&nbsp;
     </nav>
     <Outlet/>
     </div>,
@@ -57,6 +59,24 @@ const router = createBrowserRouter([
         },
         element:
         <Github/>
+      },
+      {
+        path:'proposal',
+        element:<Proposal/>
+      },
+      {
+        path:'yes',
+        element:
+        <div>
+          <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHc5YWpwZWNxN3U0M3d2dWtpZzdnN2o2OGo5OTJscWRnbGtlbnhsYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7B2xG5JxShC92rd1WL/giphy.gif" alt="" />
+        </div>
+      },
+      {
+        path:'no',
+        element:
+        <div>
+          <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWQ5dzg2aWFiY2NwYWV0a3VkZW1kZWhrZ3V3ZWkyb2x2Ym05YzFpZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rDUjFhC3FYJmaJpTEn/giphy.gif" alt="" />
+        </div>
       }
     ]
   }
